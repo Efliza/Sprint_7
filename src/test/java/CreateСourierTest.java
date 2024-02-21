@@ -13,7 +13,6 @@ import static constants.Handle.*;
 public class CreateСourierTest {
     String login = "luna";
     String password = "1234";
-    String firstname;
     String idCourier;
 
     @Before
@@ -91,7 +90,7 @@ public class CreateСourierTest {
     public void courierDeletion() {
         // Отправляем DELETE-запрос на удаление курьера
         try {
-            Response deleteCouier = given()
+            given()
                     .header("Content-type", "application/json")
                     .delete(DELETE_COURIER + idCourier);
         } catch (Exception e) {
@@ -99,4 +98,3 @@ public class CreateСourierTest {
         }
     }
 }
-
